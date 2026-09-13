@@ -44,24 +44,24 @@ export function FeaturedProductSection() {
   const parallaxY = useTransform(scrollYProgress, [0, 0.5, 1], [30, 0, -20]);
 
   return (
-    <section ref={sectionRef} className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+    <section ref={sectionRef} className="bg-surface-dark py-16 sm:py-24">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
-        className="mx-auto flex max-w-2xl flex-col items-center text-center"
+        className="mx-auto flex max-w-2xl flex-col items-center px-6 text-center"
       >
         <motion.h2
           variants={itemVariants}
-          className="text-balance text-3xl font-semibold tracking-tight text-ink sm:text-5xl"
+          className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-5xl"
         >
-          iPhone 18 Pro şimdi bizde
+          iPhone 18 Serisi şimdi bizde
         </motion.h2>
 
         <motion.p
           variants={itemVariants}
-          className="mt-4 text-lg leading-relaxed text-ink-muted"
+          className="mt-4 text-lg leading-relaxed text-white/60"
         >
           En yeni Apple deneyimini hemen keşfedin.
         </motion.p>
@@ -71,7 +71,7 @@ export function FeaturedProductSection() {
           style={isDesktop ? { scale: parallaxScale, y: parallaxY } : undefined}
           className="mt-12 w-full max-w-[220px]"
         >
-          <PhoneMockup className="w-full drop-shadow-2xl" />
+          <PhoneMockup className="w-full drop-shadow-[0_30px_60px_-15px_rgba(0,113,227,0.35)]" />
         </motion.div>
 
         <motion.div variants={itemVariants} className="mt-12 inline-flex">
@@ -85,7 +85,7 @@ export function FeaturedProductSection() {
               href="/hizmetler#one-cikan-modeller"
               className={cn(
                 buttonVariants(),
-                "h-12 rounded-full bg-brand px-8 text-base text-brand-foreground shadow-none transition-shadow hover:bg-brand/90 hover:shadow-lg"
+                "h-12 rounded-full bg-brand px-8 text-base text-brand-foreground shadow-lg shadow-brand/20 transition-shadow hover:bg-brand/90 hover:shadow-xl hover:shadow-brand/40"
               )}
             >
               Fiyat Bilgisi Al

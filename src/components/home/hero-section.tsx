@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Camera, Satellite, Smartphone } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -36,23 +35,6 @@ export function HeroSection() {
             Hizmetlerimizi İnceleyin
           </Link>
         </div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-        className="relative mx-auto mt-16 flex h-48 max-w-2xl items-center justify-center overflow-hidden rounded-3xl bg-surface-alt sm:mt-20 sm:h-56"
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-brand/10 via-transparent to-transparent" />
-        <div className="relative flex items-center gap-8 text-ink-muted/70 sm:gap-12">
-          <Smartphone className="size-7 sm:size-9" strokeWidth={1.25} />
-          <Camera className="size-8 sm:size-10" strokeWidth={1.25} />
-          <Satellite className="size-7 sm:size-9" strokeWidth={1.25} />
-        </div>
-        <span className="absolute bottom-4 text-xs text-ink-muted/60">
-          Ürün görseli yakında eklenecek
-        </span>
       </motion.div>
     </section>
   );

@@ -16,7 +16,7 @@ export function PhoneMockup({ className }: PhoneMockupProps) {
       role="img"
       aria-label="Telefon cihaz silüeti"
     >
-      <rect x="4" y="4" width="212" height="432" rx="48" fill="#1D1D1F" />
+      <rect x="4" y="4" width="212" height="432" rx="48" fill="#E5E5EA" />
       <rect
         x="4"
         y="4"
@@ -24,7 +24,7 @@ export function PhoneMockup({ className }: PhoneMockupProps) {
         height="432"
         rx="48"
         stroke="#0071E3"
-        strokeOpacity="0.18"
+        strokeOpacity="0.25"
         strokeWidth="1.5"
       />
       <rect x="14" y="30" width="192" height="380" rx="30" fill="#0A0A0A" />
@@ -35,10 +35,10 @@ export function PhoneMockup({ className }: PhoneMockupProps) {
         height="380"
         rx="30"
         fill="url(#phone-mockup-gradient)"
-        fillOpacity="0.4"
+        fillOpacity="0.5"
       />
-      <rect x="82" y="17" width="56" height="10" rx="5" fill="#F5F5F7" fillOpacity="0.3" />
-      <circle cx="110" cy="406" r="3" fill="#F5F5F7" fillOpacity="0.25" />
+      <rect x="82" y="17" width="56" height="10" rx="5" fill="#1D1D1F" fillOpacity="0.2" />
+      <circle cx="110" cy="406" r="3" fill="#1D1D1F" fillOpacity="0.18" />
       <defs>
         <linearGradient
           id="phone-mockup-gradient"
