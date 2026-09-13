@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { buttonVariants } from "@/components/ui/button";
-import { PhoneMockup } from "@/components/home/phone-mockup";
 import { cn } from "@/lib/utils";
 
 const containerVariants = {
@@ -50,18 +50,18 @@ export function FeaturedProductSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
-        className="mx-auto flex max-w-2xl flex-col items-center px-6 text-center"
+        className="mx-auto flex max-w-4xl flex-col items-center px-6 text-center"
       >
         <motion.h2
           variants={itemVariants}
-          className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-5xl"
+          className="text-balance max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-5xl"
         >
           iPhone 18 Serisi şimdi bizde
         </motion.h2>
 
         <motion.p
           variants={itemVariants}
-          className="mt-4 text-lg leading-relaxed text-white/60"
+          className="mt-4 max-w-2xl text-lg leading-relaxed text-white/60"
         >
           En yeni Apple deneyimini hemen keşfedin.
         </motion.p>
@@ -69,9 +69,17 @@ export function FeaturedProductSection() {
         <motion.div
           variants={itemVariants}
           style={isDesktop ? { scale: parallaxScale, y: parallaxY } : undefined}
-          className="mt-12 w-full max-w-[220px]"
+          className="mt-12 w-full overflow-hidden rounded-3xl"
         >
-          <PhoneMockup className="w-full drop-shadow-[0_30px_60px_-15px_rgba(0,113,227,0.35)]" />
+          <Image
+            src="/iphone.jpg"
+            alt="iPhone 18 Serisi"
+            width={1440}
+            height={688}
+            className="h-auto w-full"
+            sizes="(min-width: 1024px) 896px, 100vw"
+            priority
+          />
         </motion.div>
 
         <motion.div variants={itemVariants} className="mt-12 inline-flex">
