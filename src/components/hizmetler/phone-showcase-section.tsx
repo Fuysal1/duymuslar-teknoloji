@@ -5,7 +5,10 @@ import { YENI_TELEFONLAR } from "@/data/urunler";
 
 export function PhoneShowcaseSection() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+    <section
+      id="one-cikan-modeller"
+      className="mx-auto max-w-6xl scroll-mt-24 px-6 py-16 sm:py-20"
+    >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h2 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
