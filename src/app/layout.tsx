@@ -14,9 +14,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// src/app/icon.png ve src/app/favicon.ico: marka rengi + "D" harfinden
-// oluşan geçici monogram favicon. Gerçek logo geldiğinde bu iki dosyayı
-// onunla değiştir.
 export const metadata: Metadata = {
   title: "Duymuşlar Teknoloji",
   description:

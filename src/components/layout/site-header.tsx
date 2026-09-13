@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -21,9 +22,17 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link
           href="/"
-          className="text-[15px] font-semibold tracking-tight text-ink"
+          className="flex items-center gap-2.5 text-[15px] font-semibold tracking-tight text-ink"
           onClick={() => setOpen(false)}
         >
+          <Image
+            src="/logo.png"
+            alt="Duymuşlar Teknoloji logosu"
+            width={36}
+            height={36}
+            className="size-9 rounded-lg"
+            priority
+          />
           Duymuşlar Teknoloji
         </Link>
 

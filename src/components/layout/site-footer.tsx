@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const FOOTER_LINKS = [
@@ -13,7 +14,14 @@ export function SiteFooter() {
     <footer className="border-t border-border/60 bg-surface-alt">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-14 sm:flex-row sm:items-start sm:justify-between">
         <div className="max-w-sm">
-          <p className="text-[15px] font-semibold tracking-tight text-ink">
+          <p className="flex items-center gap-2 text-[15px] font-semibold tracking-tight text-ink">
+            <Image
+              src="/logo.png"
+              alt="Duymuşlar Teknoloji logosu"
+              width={28}
+              height={28}
+              className="size-7 rounded-md"
+            />
             Duymuşlar Teknoloji
           </p>
           <p className="mt-2 text-sm leading-relaxed text-ink-muted">
